@@ -1,0 +1,203 @@
+.soc_blk {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.3),
+                -1px -3px 6px -5px rgba(0, 0, 0, 0.5);
+    display: block;
+    font-size: 14px;
+    height: 90px;
+    margin: 20px auto;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 99.6%;
+}
+.soc_ava {
+    float: left;
+    height: 100%;
+    width: 90px;
+}
+.soc_ava img {
+    border:  none;
+    height: 100%;
+    max-width: none;
+    transform: translateX(-6px);
+    transition: all 0.4s ease 0s;
+    width: auto;
+}
+.soc_ava img:hover {
+    transform: translateX(0px);
+    transition: all 0.4s ease 0s;
+}
+.soc_content::before {
+    background: #fff none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: -15px;
+    position: absolute;
+    top: 0;
+    transform: skewX(-5deg);
+    width: 100%;
+    z-index: -1;
+}
+.soc_content {
+    box-sizing: border-box;
+    float: right;
+    height: 100%;
+    padding: 5px 10px 10px 0;
+    position: relative;
+    width: calc(100% - 90px);
+    z-index: 0;
+}
+.soc_title {
+    display: block;
+    height: 32px;
+}
+.soc_title .product_name {
+    float: left;
+    position: relative;
+}
+.soc_title h1 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0;
+    padding: 0 0 5px;
+    text-transform: none;
+}
+.soc_title .product_name > a {
+    color: #000;
+    text-decoration: none;
+}
+.soc_title .product_name > a:hover {
+    color: #777;
+    text-decoration: none;
+}
+.product_name > span {
+    border-bottom: thin dotted;
+    color: #777;
+    cursor: help;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0 3px 0 6px;
+}
+.product_name > span:hover {
+    border: none;
+}
+.soc_title .product_price {
+    color: #4cbc32;
+    float: right;
+}
+.product_price .fa {
+    font-size: 0.8em;
+    padding: 0 5px 0 0;
+}
+.soc_content h2 {
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    margin: 3px 0 5px 10px;
+    text-transform: none;
+}
+.soc_bottom {
+    color: #979797;
+    float: right;
+    font-size: 20px;
+}
+.soc_bottom .fa {
+    color: #bbb;
+    font-size: 15px;
+    margin: 0 3px 0 6px;
+}
+.soc_description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.soc_description::after {
+    background: rgba(25, 55, 75, 0.9);
+    box-sizing: border-box;
+    color: #fff;
+    content: attr(data-title);
+    left: -90px;
+    line-height: 22px;
+    opacity: 0;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: center;
+    top: -140px;
+    transition: all 0.4s ease-in-out 0s;
+    white-space: normal;
+    width: calc(100% + 90px);
+}
+.soc_description:hover::after {
+    opacity: 1;
+    top: 0;
+    transition: opacity 0.25s ease-in 0s, top 0.4s ease-in-out 0s;
+}
+
+
+/* START кнопы фильтра */
+.soc_first_line,
+.soc_second_line {
+    display: block;
+}
+.soc_sort {
+    display: inline-block;
+    margin: 5px;
+}
+.soc_button {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    margin: 5px 3px;
+    padding: 6px 9px;
+    vertical-align: middle;
+}
+.soc_button.active,
+.soc_button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+.soc_button.active {
+    pointer-events: none;
+}
+.soc_sort_wrapper .fa {
+    margin: 0 5px 0 0;
+}
+.soc_sort .fa.soc_button.disabled {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+    color: #999;
+    opacity: 0.4;
+    pointer-events: none;
+}
+/* END кнопы фильтра */
+
+@media screen and (max-width:480px) {
+    .soc_first_line > span {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .soc_title .product_price {
+        background-color: rgba(255, 255, 255, 0.8);
+        left: -90px;
+        padding: 1px 5px;
+        position: absolute;
+        top: 0;
+        width: 90px;
+    }
+    .soc_title .product_name {
+        float: none;
+        font-size: 18px;
+        line-height: 16px;
+    }
+    .soc_description::after {
+        line-height: 16px;
+    }
+}
