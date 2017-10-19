@@ -79,7 +79,7 @@ function soc_get_local_addons_info($atts){
     }
 
     $ids = explode(',',$rcl_options['soc_id_addons']);
-    $out = '<div class="soc_addon_wrapper">';
+    $out = '<div id="soc_list_box" class="soc_addon_wrapper">';
 
         $out .= soc_filter_button(); // кнопки фильтра
 

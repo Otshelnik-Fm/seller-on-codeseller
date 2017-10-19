@@ -1,9 +1,9 @@
 .soc_blk {
     background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.3),
-                -1px -3px 6px -5px rgba(0, 0, 0, 0.5);
-    display: block;
+    border-radius: 2px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 3px 4px 10px -2px #e0e0e0;
+    box-sizing: border-box;
     font-size: 14px;
     height: 90px;
     margin: 20px auto;
@@ -13,104 +13,100 @@
     text-align: left;
     width: 99.6%;
 }
+.soc_blk:first-child {
+    margin: 3px 0 20px;
+}
 .soc_ava {
     float: left;
     height: 100%;
     width: 90px;
 }
-.soc_ava img {
+.soc_blk .soc_ava img {
     border:  none;
-    height: 100%;
+    height: 100% !important;
     max-width: none;
     transform: translateX(-6px);
     transition: all 0.4s ease 0s;
     width: auto;
 }
-.soc_ava img:hover {
+.soc_blk .soc_ava img:hover {
     transform: translateX(0px);
     transition: all 0.4s ease 0s;
 }
 .soc_content::before {
-    background: #fff none repeat scroll 0 0;
-    bottom: 0;
+    background-color: #fff;
+    bottom: -10px;
     content: "";
     left: -15px;
+    outline: 1px solid transparent;
     position: absolute;
     top: 0;
-    transform: skewX(-5deg);
+    transform-style: preserve-3d;
+    transform: skewX(-6deg);
     width: 100%;
     z-index: -1;
 }
 .soc_content {
+    align-content: space-between;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
     float: right;
     height: 100%;
-    padding: 5px 10px 10px 0;
+    line-height: normal;
+    padding: 4px 5px 4px 0;
     position: relative;
     width: calc(100% - 90px);
     z-index: 0;
 }
 .soc_title {
-    display: block;
-    height: 32px;
-}
-.soc_title .product_name {
-    float: left;
-    position: relative;
-}
-.soc_title h1 {
+    align-items: flex-start;
+    display: flex;
     font-size: 22px;
     font-weight: bold;
-    line-height: normal;
-    margin: 0;
-    padding: 0 0 5px;
-    text-transform: none;
+    justify-content: space-between;
+    line-height: 18px;
+    margin: 3px 0 0;
+    width: 100%;
 }
-.soc_title .product_name > a {
-    color: #000;
+.soc_title .soc_product_name > a {
     text-decoration: none;
 }
-.soc_title .product_name > a:hover {
-    color: #777;
-    text-decoration: none;
-}
-.product_name > span {
+.soc_product_name > span {
     border-bottom: thin dotted;
     color: #777;
     cursor: help;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: normal;
-    margin: 0 3px 0 6px;
+    margin: 0 3px;
+    vertical-align: top;
 }
-.product_name > span:hover {
+.soc_product_name > span:hover {
     border: none;
 }
 .soc_title .product_price {
     color: #4cbc32;
-    float: right;
+    margin: 0 2px 0 0;
 }
-.product_price .fa {
-    font-size: 0.8em;
-    padding: 0 5px 0 0;
+.soc_content .soc_support {
+    color: #999;
+    font-size: 13px;
 }
-.soc_content h2 {
-    color: #9b9b9b;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: normal;
-    margin: 3px 0 5px 10px;
-    text-transform: none;
+.soc_content_bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .soc_bottom {
-    color: #979797;
-    float: right;
-    font-size: 20px;
+    color: #999;
+    flex-shrink: 0;
+    font-size: 18px;
     line-height: 1;
 }
 .soc_bottom .fa {
     color: #bbb;
-    font-size: 15px;
-    margin: 0 3px 0 6px;
+    font-size: 13px;
+    margin: 0 3px;
 }
 .soc_description {
     overflow: hidden;
@@ -122,6 +118,7 @@
     box-sizing: border-box;
     color: #fff;
     content: attr(data-title);
+    font-size: 14px;
     left: -90px;
     line-height: 18px;
     opacity: 0;
@@ -141,29 +138,26 @@
 
 
 /* START кнопы фильтра */
-.soc_first_line,
-.soc_second_line {
-    display: block;
-}
 .soc_sort {
     display: inline-block;
     margin: 5px;
 }
 .soc_button {
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: #f2f2f2;
+    border: 1px solid #e2e2e2;
     cursor: pointer;
     display: inline-block;
     font-size: 18px;
     line-height: 1;
-    margin: 5px 3px;
+    margin: 4px 2px;
     padding: 6px 9px;
+    transition: all 0.1s ease-in;
     vertical-align: middle;
 }
 .soc_button.active,
 .soc_button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    background-color: #e5e5e5;
+    border-color: #d5d5d5;
 }
 .soc_button.active {
     pointer-events: none;
@@ -172,9 +166,8 @@
     margin: 0 5px 0 0;
 }
 .soc_sort .fa.soc_button.disabled {
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2) inset;
     color: #999;
-    opacity: 0.4;
+    opacity: 0.6;
     pointer-events: none;
 }
 /* END кнопы фильтра */
@@ -185,16 +178,7 @@
         font-size: 16px;
         font-weight: bold;
     }
-    .soc_title .product_price {
-        background-color: rgba(255, 255, 255, 0.8);
-        left: -90px;
-        padding: 1px 5px;
-        position: absolute;
-        top: 0;
-        width: 90px;
-    }
-    .soc_title .product_name {
-        float: none;
+    .soc_title .soc_product_name {
         font-size: 18px;
         line-height: 16px;
     }
