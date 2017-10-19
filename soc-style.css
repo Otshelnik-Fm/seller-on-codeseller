@@ -1,4 +1,12 @@
+@keyframes soclistanim {
+    0%     { opacity: 0; }
+    100%   { opacity: 1; }
+}
 .soc_blk {
+    animation-delay: 0.3s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    animation-name: soclistanim;
     background-color: #fff;
     border-radius: 2px;
     border: 1px solid #e5e5e5;
@@ -7,14 +15,23 @@
     font-size: 14px;
     height: 90px;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 900px;
     overflow: hidden;
     position: relative;
     text-align: left;
     width: 99.6%;
 }
+.soc_blk:nth-child(2){animation-delay: 0.5s;}
+.soc_blk:nth-child(3){animation-delay: 0.7s;}
+.soc_blk:nth-child(4){animation-delay: 0.9s;}
+.soc_blk:nth-child(5){animation-delay: 1.1s;}
+.soc_blk:nth-child(6){animation-delay: 1.3s;}
+.soc_blk:nth-child(7){animation-delay: 1.5s;}
+.soc_blk:nth-child(8){animation-delay: 1.7s;}
+.soc_blk:nth-child(9){animation-delay: 1.9s;}
+.soc_blk:nth-child(10){animation-delay: 2.1s;}
 .soc_blk:first-child {
-    margin: 3px 0 20px;
+    margin: 3px auto 20px;
 }
 .soc_ava {
     float: left;
@@ -33,10 +50,11 @@
     transform: translateX(0px);
     transition: all 0.4s ease 0s;
 }
-.soc_content::before {
+.soc_blk .soc_content::before {
     background-color: #fff;
     bottom: -10px;
     content: "";
+    display: block;
     left: -15px;
     outline: 1px solid transparent;
     position: absolute;
@@ -179,8 +197,8 @@
         font-weight: bold;
     }
     .soc_title .soc_product_name {
-        font-size: 18px;
-        line-height: 16px;
+        font-size: 17px;
+        line-height: 15px;
     }
     .soc_description::after {
         line-height: 16px;
