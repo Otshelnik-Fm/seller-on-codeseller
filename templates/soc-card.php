@@ -43,7 +43,7 @@ global $soc_card_data;
 ?>
 
 <div class="soc_box_ava">
-    <a target="_blank" href="https://codeseller.ru/?p=<?php echo $soc_card_data['post_id']; ?>">
+    <a rel="nofollow" target="_blank" href="https://codeseller.ru/?p=<?php echo $soc_card_data['post_id']; ?>">
         <img alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $soc_card_data['thumbnail']; ?>">
         <div class="soc_box_price">Цена: <?php echo $soc_card_data['price']; ?> р.</div>
     </a>
@@ -55,7 +55,7 @@ global $soc_card_data;
     </div>
 </div>
 <div class="soc_box_title">
-    <a title="Перейти в магазин и почитать описание" target="_blank" href="https://codeseller.ru/?p=<?php echo $soc_card_data['post_id']; ?>">
+    <a rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="https://codeseller.ru/?p=<?php echo $soc_card_data['post_id']; ?>">
         <?php echo $soc_card_data['name']; ?>
     </a>
 </div>

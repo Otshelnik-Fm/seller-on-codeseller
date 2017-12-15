@@ -45,7 +45,7 @@ if(empty($soc_downloads)){                          // если загрузок
 ?>
 
 <div class="soc_ava">
-    <a title="Перейти" href="https://codeseller.ru/?p=<?php echo $soc_xml_data->post_id; ?>">
+    <a rel="nofollow" target="_blank" title="Перейти" href="https://codeseller.ru/?p=<?php echo $soc_xml_data->post_id; ?>">
         <img src="<?php echo $soc_xml_data->thumbnail; ?>" class="" alt="Дополнение для WordPress плагина WP-Recall">
     </a>
 </div>
@@ -53,7 +53,7 @@ if(empty($soc_downloads)){                          // если загрузок
 <div class="soc_content">
     <div class="soc_title">
         <div class="soc_product_name">
-            <a title="Перейти к описанию дополнения" href="https://codeseller.ru/?p=<?php echo $soc_xml_data->post_id; ?>"><?php echo $soc_xml_data->name; ?></a>
+            <a rel="nofollow" target="_blank" title="Перейти к описанию дополнения" href="https://codeseller.ru/?p=<?php echo $soc_xml_data->post_id; ?>"><?php echo $soc_xml_data->name; ?></a>
             <span title="Обновление от <?php echo $soc_xml_data->update; ?>">v.<?php echo $soc_xml_data->version; ?></span>
         </div>
         <div class="product_price" title="Стоимость"><?php echo $soc_prices; ?></div>

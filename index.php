@@ -1,5 +1,13 @@
 <?php
 
+/*
+
+╔═╗╔╦╗╔═╗╔╦╗
+║ ║ ║ ╠╣ ║║║ https://otshelnik-fm.ru
+╚═╝ ╩ ╚  ╩ ╩
+
+*/
+
 // подключаем настройки
 require_once('settings.php');
 
