@@ -9,7 +9,7 @@
 */
 
 // подключаем настройки
-require_once('settings.php');
+require_once 'inc/settings.php';
 
 // скрипты и стили поддерживают объединение от реколл
 function soc_load_resource(){
@@ -18,8 +18,8 @@ function soc_load_resource(){
 
     // находимся на той странице что указана в настройках или не указано (значит на всех нужны) - грузим ресурсы
     if( $post->ID == $id_page || $id_page == 'all-pages' ){
-        rcl_enqueue_style('soc_cool_style',rcl_addon_url('soc-style.css', __FILE__));
-        rcl_enqueue_script('soc_cool_script', rcl_addon_url('inc/soc-script.js', __FILE__));
+        rcl_enqueue_style('soc_cool_style',rcl_addon_url('res/soc-style.css', __FILE__));
+        rcl_enqueue_script('soc_cool_script', rcl_addon_url('res/soc-script.js', __FILE__));
     }
 }
 if (!is_admin()){
@@ -33,7 +33,7 @@ function soc_load_random(){
     $id_page = rcl_get_option('soc_id_rand','all-pages');
 
     if( $post->ID == $id_page || $id_page == 'all-pages' ){
-        rcl_enqueue_style('soc_rand_style',rcl_addon_url('inc/soc-card.css', __FILE__));
+        rcl_enqueue_style('soc_rand_style',rcl_addon_url('res/soc-card.css', __FILE__));
     }
 }
 if (!is_admin()){
