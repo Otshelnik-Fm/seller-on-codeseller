@@ -1,5 +1,6 @@
 <?php
 /*
+Шаблон дополнения Seller on Codeseller
 Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="card",
 Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
 - сделать нужные вам правки и изменения и он будет подключаться оттуда
@@ -80,5 +81,3 @@ $description = $data[0]->description;
         <?php echo $name; ?>
     </a>
 </div>
-
-

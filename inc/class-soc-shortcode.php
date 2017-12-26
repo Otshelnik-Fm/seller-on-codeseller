@@ -79,16 +79,16 @@ class SOC_Shortcode {
         $response = wp_remote_get($url);
         $response_code = wp_remote_retrieve_response_code($response);
 
-        if (200 == $response_code){                         // все ок
+        if (200 == $response_code){                 // все ок
             $data = wp_remote_retrieve_body($response);
 
             if( !is_preview() ){
-                $rcl_cache->update_cache($data); // создаем или обновляем кеш-файл с сформированным контентом
+                $rcl_cache->update_cache($data);    // создаем или обновляем кеш-файл с сформированным контентом
             }
 
             return json_decode($data);
         }
-        else {                                  // что-то не так
+        else {                                      // что-то не так
             rcl_add_log( 'Seller on CodeSeller: ошибка запроса', array($url, $response_code) );
 
             $response_message = wp_remote_retrieve_response_message($response);
@@ -135,9 +135,9 @@ class SOC_Shortcode {
 
         if($data->count == 0 || !$data->addons) return 'Ничего не найдено';
 
-        $content = $this->include_template($data); // поступившие "живые" данные с контентом
+        $content = $this->include_template($data);  // поступившие "живые" данные с контентом
 
-        return $content;                          // выведем контент
+        return $content;                            // выведем контент
     }
 
 
@@ -152,8 +152,8 @@ class SOC_Shortcode {
 
         $out = '<div id="soc_box" class="soc_addon_wrapper soc_'.$this->attrs['template'].'">';
 
-            if($this->attrs['filter'] == 1){        // нужен фильтр
-                $out .= $this->js_filter(); // кнопки фильтра
+            if($this->attrs['filter'] == 1){    // нужен фильтр
+                $out .= $this->js_filter();     // кнопки фильтра
                 $class_filter = 'js_filter_ready';
             }
 
@@ -168,9 +168,9 @@ class SOC_Shortcode {
 
                     if( isset($this->attrs['limit']) && $this->attrs['limit'] == $i) break;
                 }
-            $out .= '</div>'; /* END soc_wrapper */
+            $out .= '</div>';   /* END soc_wrapper */
 
-        $out .= '</div>'; /* END soc_addon_wrapper */
+        $out .= '</div>';       /* END soc_addon_wrapper */
 
         return $out;
     }

@@ -69,13 +69,13 @@
     width: 100%;
 }
 @media screen and (max-width:480px) {
-.soc_fw_left {
-	max-width: 100px;
-	align-self: flex-start;
-}
-.soc_fw_title {
-	font-size: 20px;
-	margin: 2px 0;
-	line-height: 20px;
-}
+    .soc_fw_left {
+        align-self: flex-start;
+        max-width: 100px;
+    }
+    .soc_fw_title {
+        font-size: 20px;
+        line-height: 20px;
+        margin: 2px 0;
+    }
 }

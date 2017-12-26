@@ -17,7 +17,7 @@ require_once 'inc/resources.php';   // подключаем ресурсы
 // регистрируем шорткод
 function soc_shortcode($atts){
     if( !class_exists('SOC_Shortcode') ){
-        require_once('inc/class-soc-shortcode.php'); // ядро
+        require_once('inc/class-soc-shortcode.php');
     }
     $shrt = new SOC_Shortcode($atts);
     return $shrt->get_products();

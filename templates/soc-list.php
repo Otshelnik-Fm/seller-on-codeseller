@@ -1,5 +1,6 @@
 <?php
 /*
+Шаблон дополнения Seller on Codeseller
 Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="list",
 Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
 - сделать нужные вам правки и изменения и он будет подключаться оттуда
@@ -92,4 +93,3 @@ $active_installs = $data[0]->{'active-installs'};
         </div>
     </div>
 </div>
-
