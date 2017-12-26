@@ -1,0 +1,35 @@
+.soc_sort_wrapper{
+    animation: fadeIn .5s linear .3s forwards;
+}
+.soc_sort {
+    display: inline-block;
+    margin: 5px;
+}
+.soc_button {
+    background-color: #f2f2f2;
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    margin: 4px 2px;
+    padding: 6px 9px;
+    transition: all 0.1s ease-in;
+    vertical-align: middle;
+}
+.soc_button.active,
+.soc_button:hover {
+    background-color: #e5e5e5;
+    border-color: #d5d5d5;
+}
+.soc_button.active {
+    pointer-events: none;
+}
+.soc_sort_wrapper .fa {
+    margin: 0 5px 0 0;
+}
+.soc_sort .fa.soc_button.disabled {
+    color: #999;
+    opacity: 0.6;
+    pointer-events: none;
+}

@@ -1,6 +1,6 @@
 <?php
 /*
-Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="card",
+Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="full-width",
 Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
 - сделать нужные вам правки и изменения и он будет подключаться оттуда
 Работа с шаблонами описана тут: https://codeseller.ru/?p=11632
@@ -54,31 +54,21 @@ Array(
 $url = soc_get_link($data[0]->post_id, $data[1]['disable_ref']);
 $pict = $data[0]->thumbnail;
 $name = $data[0]->name;
-$update = $data[0]->update;
-$version = $data[0]->version;
 $price = $data[0]->price.' р.';
-$support = $data[0]->{'support-core'};
 $description = $data[0]->description;
 
 // ниже сам шаблон для редактирования
 ?>
 
-<div class="soc_box_ava">
-    <a rel="nofollow" target="_blank" href="<?php echo $url; ?>">
+<div class="soc_fw_left">
+    <a class="soc_fw_ava" rel="nofollow" title="Перейти в магазин и почитать описание" target="_blank" href="<?php echo $url; ?>">
         <img alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict; ?>">
-        <div class="soc_box_price">Цена: <?php echo $price ?></div>
     </a>
-    <div class="soc_more">
-        <div class="soc_box_description"><?php echo $description; ?></div>
-        <div class="soc_box_version">Версия: v<?php echo $version; ?></div>
-        <div class="soc_box_update">Обновление: <?php echo $update; ?></div>
-        <div class="soc_box_support">Поддержка WP-Recall: v<?php echo $support; ?></div>
-    </div>
 </div>
-<div class="soc_box_title">
-    <a rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
+<div class="soc_fw_right">
+    <a class="soc_fw_title" rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
         <?php echo $name; ?>
     </a>
+    <div class="soc_fw_description"><?php echo $description; ?></div>
+    <div class="soc_fw_price">Цена: <?php echo $price ?></div>
 </div>
-
-
