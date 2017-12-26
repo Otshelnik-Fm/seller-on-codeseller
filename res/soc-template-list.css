@@ -40,7 +40,7 @@
     height: 100%;
     width: 90px;
 }
-.soc_blk .soc_tl_ava img {
+.soc_list .soc_blk .soc_tl_ava img {
     border:  none;
     height: 100% !important;
     max-width: none;
@@ -48,7 +48,7 @@
     transition: all 0.4s ease 0s;
     width: auto;
 }
-.soc_blk .soc_tl_ava img:hover {
+.soc_list .soc_blk .soc_tl_ava img:hover {
     transform: translateX(0px);
     transition: all 0.4s ease 0s;
 }
