@@ -62,7 +62,7 @@ $support = $data[0]->{'support-core'};
 $description = $data[0]->description;
 $downloads = (string)$data[0]->downloads;
 $active_installs = $data[0]->{'active-installs'};
-
+if (empty((array)$active_installs)) $active_installs = 0;
 // ниже сам шаблон для редактирования
 ?>
 

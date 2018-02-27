@@ -157,7 +157,12 @@ class SOC_Shortcode {
                 $class_filter = 'js_filter_ready';
             }
 
-            $out .= '<div class="soc_wrapper '.$class_filter.'">';
+            $d_style = '';
+            if($this->attrs['template'] != 'card'){
+                $d_style = 'style="opacity:0;"';
+            }
+
+            $out .= '<div class="soc_wrapper '.$class_filter.'" '.$d_style.'>';
                 foreach ($datas->addons as $data){
                     if($this->attrs['premium'] == 1 && $data->price == 0) continue; // нужен премиум
                     $i++;

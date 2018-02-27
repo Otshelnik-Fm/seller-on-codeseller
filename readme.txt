@@ -113,6 +113,13 @@
 
 
 == Changelog ==
+= 2018-02-27 =
+v2.1
+* Исправлена ошибка в шаблоне list - появляющаяся когда только что загруженное дополнение в каталог CodeSeller еще не имело в значении кол-во активных установок
+* Стили грузятся сверху.
+* Проработана анимация появления при загрузке страницы. Теперь блоки появляются плавней, без дёрганья, в большинстве случаев (для full-width и list шаблонов)
+
+
 = 2017-12-27 =
 v2.0.1
 * Небольшие css-фиксы
@@ -172,5 +179,4 @@ v0.1
 * При возникновении проблемы, создайте соотвествующую тему на <a href="https://codeseller.ru/forum/product-13291/" target="_blank">форуме поддержки товара</a>
 * Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в <a href="https://codeseller.ru/author/otshelnik-fm/?tab=chat" target="_blank">ЛС</a> с техзаданием на платную доработку.
 
-Полный список моих работ опубликован <a href="http://across-ocean.otshelnik-fm.ru/" target="_blank">на моем демо-сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>
-
+Все мои работы опубликованы <a href="https://otshelnik-fm.ru/?p=2562" target="_blank">на моём сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>
