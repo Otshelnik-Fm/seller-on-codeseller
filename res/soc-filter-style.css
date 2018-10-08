@@ -25,10 +25,10 @@
 .soc_button.active {
     pointer-events: none;
 }
-.soc_sort_wrapper .fa {
+.soc_sort_wrapper .rcli {
     margin: 0 5px 0 0;
 }
-.soc_sort .fa.soc_button.disabled {
+.soc_sort .rcli.soc_button.disabled {
     color: #999;
     opacity: 0.6;
     pointer-events: none;

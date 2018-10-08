@@ -62,12 +62,12 @@ $description = $data[0]->description;
 ?>
 
 <div class="soc_fw_left">
-    <a class="soc_fw_ava" rel="nofollow" title="Перейти в магазин и почитать описание" target="_blank" href="<?php echo $url; ?>">
+    <a class="soc_fw_ava no_marked_icon cwb_no_animate" rel="nofollow" title="Перейти в магазин и почитать описание" target="_blank" href="<?php echo $url; ?>">
         <img alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict; ?>">
     </a>
 </div>
 <div class="soc_fw_right">
-    <a class="soc_fw_title" rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
+    <a class="soc_fw_title no_marked_icon cwb_no_animate" rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
         <?php echo $name; ?>
     </a>
     <div class="soc_fw_description"><?php echo $description; ?></div>

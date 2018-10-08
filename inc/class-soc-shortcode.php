@@ -187,15 +187,15 @@ class SOC_Shortcode {
             $out .= '<div class="soc_first_line">';
             $out .=     '<span>Сортировка по цене:</span>';
             $out .=     '<div class="soc_sort">';
-            $out .=         '<i class="fa fa-sort-amount-desc soc_button" title="От большего к меньшему"></i><i class="fa fa-sort-amount-asc soc_button" title="От меньшего к большему"></i>';
+            $out .=         '<i class="rcli fa-sort-amount-desc soc_button" title="От большего к меньшему"></i><i class="rcli fa-sort-amount-asc soc_button" title="От меньшего к большему"></i>';
             $out .=     '</div>';
-            $out .=     '<div class="soc_premium soc_button"><i class="fa fa-usd"></i>Премиум</div>';
-            $out .=     '<div class="soc_reset soc_button"><i class="fa fa-refresh"></i>Сброс</div>';
+            $out .=     '<div class="soc_premium soc_button"><i class="rcli fa-usd"></i>Премиум</div>';
+            $out .=     '<div class="soc_reset soc_button"><i class="rcli fa-refresh"></i>Сброс</div>';
             $out .= '</div>';
 
             $out .= '<div class="soc_second_line">';
-            $out .=     '<div class="soc_popular soc_button" title="По скачиванию"><i class="fa fa-download"></i>Популярные</div>';
-            $out .=     '<div class="soc_alphabet soc_button"><i class="fa fa-sort-alpha-asc"></i>По алфавиту</div>';
+            $out .=     '<div class="soc_popular soc_button" title="По скачиванию"><i class="rcli fa-download"></i>Популярные</div>';
+            $out .=     '<div class="soc_alphabet soc_button"><i class="rcli fa-sort-alpha-asc"></i>По алфавиту</div>';
             $out .= '</div>';
         $out .= '</div>'; /* END soc_sort_wrapper */
         return $out;

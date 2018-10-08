@@ -65,7 +65,7 @@ $description = $data[0]->description;
 ?>
 
 <div class="soc_box_ava">
-    <a rel="nofollow" target="_blank" href="<?php echo $url; ?>">
+    <a class="soc_cd_ava no_marked_icon cwb_no_animate" rel="nofollow" target="_blank" href="<?php echo $url; ?>">
         <img alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict; ?>">
         <div class="soc_box_price">Цена: <?php echo $price ?></div>
     </a>
@@ -77,7 +77,7 @@ $description = $data[0]->description;
     </div>
 </div>
 <div class="soc_box_title">
-    <a rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
+    <a class="soc_cd_title no_marked_icon cwb_no_animate" rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
         <?php echo $name; ?>
     </a>
 </div>

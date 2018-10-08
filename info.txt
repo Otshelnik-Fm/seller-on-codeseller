@@ -1,6 +1,6 @@
 Name: Seller on Codeseller;
-Version: 2.1;
-Support Core: 16.10.10;
+Version: 2.2;
+Support Core: 16.16.0;
 Description: Дополнение выводит шорткодом список товаров с сервиса CodeSeller.ru с возможностью их сортировки и фильтрации;
 Author: Владимир Дружаев (Otshelnik-Fm);
 Author URI: https://otshelnik-fm.ru/;

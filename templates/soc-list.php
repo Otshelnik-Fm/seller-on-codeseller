@@ -67,7 +67,7 @@ if (empty((array)$active_installs)) $active_installs = 0;
 ?>
 
 <div class="soc_tl_ava">
-    <a rel="nofollow" target="_blank" title="Перейти" href="<?php echo $url; ?>">
+    <a class="no_marked_icon cwb_no_animate" rel="nofollow" target="_blank" title="Перейти" href="<?php echo $url; ?>">
         <img src="<?php echo $pict; ?>" alt="Дополнение для WordPress плагина WP-Recall">
     </a>
 </div>
@@ -75,7 +75,7 @@ if (empty((array)$active_installs)) $active_installs = 0;
 <div class="soc_tl_content">
     <div class="soc_tl_title">
         <div class="soc_tl_product_name">
-            <a rel="nofollow" target="_blank" title="Перейти к описанию дополнения" href="<?php echo $url; ?>"><?php echo $name; ?></a>
+            <a class="no_marked_icon cwb_no_animate" rel="nofollow" target="_blank" title="Перейти к описанию дополнения" href="<?php echo $url; ?>"><?php echo $name; ?></a>
             <span title="Обновление от <?php echo $update; ?>">v.<?php echo $version; ?></span>
         </div>
         <div class="product_tl_price" title="Стоимость"><?php echo $price; ?></div>
@@ -88,8 +88,8 @@ if (empty((array)$active_installs)) $active_installs = 0;
             <?php echo $description; ?>
         </div>
         <div class="soc_tl_bottom">
-            <span title="Загрузок"><i class="fa fa-download"></i><?php echo $downloads; ?></span>
-            <span title="Активных установок"><i class="fa fa-calendar-check-o"></i><?php echo $active_installs; ?></span>
+            <span title="Загрузок"><i class="rcli fa-download"></i><?php echo $downloads; ?></span>
+            <span title="Активных установок"><i class="rcli fa-calendar-check-o"></i><?php echo $active_installs; ?></span>
         </div>
     </div>
 </div>
