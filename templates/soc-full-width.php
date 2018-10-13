@@ -57,17 +57,18 @@ $pict = $data[0]->thumbnail;
 $name = $data[0]->name;
 $price = $data[0]->price.' р.';
 $description = $data[0]->description;
+$version = $data[0]->version;
 
 // ниже сам шаблон для редактирования
 ?>
 
 <div class="soc_fw_left">
-    <a class="soc_fw_ava no_marked_icon cwb_no_animate" rel="nofollow" title="Перейти в магазин и почитать описание" target="_blank" href="<?php echo $url; ?>">
-        <img alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict; ?>">
+    <a class="soc_fw_ava no_marked_icon cwb_no_animate" rel="nofollow noopener" title="Перейти в магазин и почитать описание" target="_blank" href="<?php echo $url; ?>">
+        <img alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict.'?ver='.$version.''; ?>">
     </a>
 </div>
 <div class="soc_fw_right">
-    <a class="soc_fw_title no_marked_icon cwb_no_animate" rel="nofollow" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
+    <a class="soc_fw_title no_marked_icon cwb_no_animate" rel="nofollow noopener" target="_blank" title="Перейти в магазин и почитать описание" href="<?php echo $url; ?>">
         <?php echo $name; ?>
     </a>
     <div class="soc_fw_description"><?php echo $description; ?></div>

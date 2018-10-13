@@ -1,12 +1,8 @@
-@keyframes socanim {
-    0%     { opacity: 0; }
-    100%   { opacity: 1; }
-}
 .soc_list .soc_wrapper {
     animation: fadeIn .5s linear .2s forwards;
 }
 .soc_list .soc_blk {
-    animation: socanim .5s linear .5s backwards;
+    animation: fadeIn .5s linear .5s backwards;
     background-color: #fff;
     border-radius: 2px;
     border: 1px solid #e5e5e5;

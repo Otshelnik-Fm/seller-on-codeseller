@@ -150,7 +150,7 @@ class SOC_Shortcode {
             shuffle($datas->addons);
         }
 
-        $out = '<div id="soc_box" class="soc_addon_wrapper soc_'.$this->attrs['template'].'">';
+        $out = '<div class="soc_addon_wrapper soc_'.$this->attrs['template'].'">';
 
             if($this->attrs['filter'] == 1){    // нужен фильтр
                 $out .= $this->js_filter();     // кнопки фильтра

@@ -1,5 +1,5 @@
 .soc_sort_wrapper{
-    animation: fadeIn .4s linear .4s forwards;
+    animation: fadeIn .5s linear .7s forwards;
 }
 .soc_sort {
     display: inline-block;
@@ -27,6 +27,7 @@
 }
 .soc_sort_wrapper .rcli {
     margin: 0 5px 0 0;
+    min-width: 10px;
 }
 .soc_sort .rcli.soc_button.disabled {
     color: #999;
