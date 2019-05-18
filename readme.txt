@@ -113,6 +113,12 @@
 
 
 == Changelog ==
+= 2019-05-18 =
+v2.4
+* Исправлена ошибка когда товар снят с продажи
+* В шаблоне list рядом с ценой идет (vip) - если это дополнение закрыто Vip доступом
+
+
 = 2018-10-11 =
 v2.3
 * работа над доступностью (accessibility)
@@ -194,4 +200,4 @@ v0.1
 * При возникновении проблемы, создайте соотвествующую тему на <a href="https://codeseller.ru/forum/product-13291/" target="_blank">форуме поддержки товара</a>
 * Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в <a href="https://codeseller.ru/author/otshelnik-fm/?tab=chat" target="_blank">ЛС</a> с техзаданием на платную доработку.
 
-Все мои работы опубликованы <a href="https://otshelnik-fm.ru/?p=2562" target="_blank">на моём сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>
+Все мои работы опубликованы <a href="https://otshelnik-fm.ru/?p=2562&utm_source=free-addons&utm_medium=addon-description&utm_campaign=seller-on-codeseller&utm_content=codeseller.ru&utm_term=all-my-addons" target="_blank">на моём сайте</a> и в каталоге магазина <a href="https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products" target="_blank">CodeSeller.ru</a>

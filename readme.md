@@ -9,9 +9,9 @@
 
 ## Demo:  
 
-[слева](https://otshelnik-fm.ru/) - 4-ре рандомных премиум товара выводятся карточкой  
+[слева](https://otshelnik-fm.ru/?utm_source=free-addons&utm_medium=addon-description&utm_campaign=seller-on-codeseller&utm_content=github-com&utm_term=home-page) - 4-ре рандомных премиум товара выводятся карточкой  
 
-[Список всех моих дополнений](https://otshelnik-fm.ru/all-my-addons-for-wp-recall/) с фильтром  
+[Список всех моих дополнений](https://otshelnik-fm.ru/?p=2562&utm_source=free-addons&utm_medium=addon-description&utm_campaign=seller-on-codeseller&utm_content=github-com&utm_term=all-my-addons) с фильтром  
 
 ------------------------------
 
@@ -165,7 +165,13 @@
 ------------------------------
 
 ## Changelog:  
-= 2018-10-11 =  
+**2019-05-18**  
+v2.4  
+* Исправлена ошибка когда товар снят с продажи  
+* В шаблоне list рядом с ценой идет (vip) - если это дополнение закрыто Vip доступом  
+
+
+**2018-10-11**  
 v2.3  
 * работа над доступностью (accessibility)  
 * id блока убрал т.к. на странице может быть множество блоков (вызовов шорткодов)  
@@ -247,7 +253,7 @@ v0.1
 * При возникновении проблемы, создайте соотвествующую тему на [форуме поддержки](https://codeseller.ru/forum/product-13291/) товара  
 * Если вам нужна доработка под ваши нужды - вы можете обратиться ко мне в <a href="https://codeseller.ru/author/otshelnik-fm/?tab=chat" target="_blank">ЛС</a> с техзаданием на платную доработку.  
 
-Полный список моих работ опубликован на [моём сайте](https://otshelnik-fm.ru/all-my-addons-for-wp-recall/) и в каталоге магазина [CodeSeller.ru](https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products)  
+Полный список моих работ опубликован на [моём сайте](https://otshelnik-fm.ru/?p=2562&utm_source=free-addons&utm_medium=addon-description&utm_campaign=seller-on-codeseller&utm_content=github-com&utm_term=all-my-addons) и в каталоге магазина [CodeSeller.ru](https://codeseller.ru/author/otshelnik-fm/?tab=publics&subtab=type-products)  
 
 ------------------------------
 
