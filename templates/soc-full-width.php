@@ -1,6 +1,7 @@
 <?php
 /*
-  Шаблон дополнения Seller on Codeseller v1.1
+  Шаблон дополнения Seller on Codeseller
+  Версия шаблона: v1.2
   Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="full-width",
   Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
   - сделать нужные вам правки и изменения и он будет подключаться оттуда
@@ -54,7 +55,7 @@
 $prices = ( ! is_object( $data[0]->price )) ? $data[0]->price : '0';
 
 $url         = soc_get_link( $data[0]->post_id, $data[1]['disable_ref'] );
-$pict        = $data[0]->thumbnail;
+$pict        = ( ! is_object( $data[0]->thumbnail )) ? $data[0]->thumbnail : '';
 $name        = $data[0]->name;
 $price       = ( string ) $prices . ' р.';
 $description = $data[0]->description;
