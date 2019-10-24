@@ -1,7 +1,7 @@
 <?php
 /*
   Шаблон дополнения Seller on Codeseller
-  Версия шаблона: v1.2
+  Версия шаблона: v1.3
   Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="list",
   Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
   - сделать нужные вам правки и изменения и он будет подключаться оттуда
@@ -74,7 +74,7 @@ if ( empty( ( array ) $active_installs ) )
 
 <div class="soc_tl_ava">
     <a class="no_marked_icon cwb_no_animate" rel="nofollow noopener" target="_blank" title="Перейти" href="<?php echo $url; ?>">
-        <img src="<?php echo $pict . '?ver=' . $version . ''; ?>" alt="Дополнение для WordPress плагина WP-Recall">
+        <img loading="lazy" src="<?php echo $pict . '?ver=' . $version . ''; ?>" alt="Дополнение для WordPress плагина WP-Recall">
     </a>
 </div>
 
