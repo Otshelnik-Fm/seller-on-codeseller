@@ -1,7 +1,7 @@
 <?php
 /*
   Шаблон дополнения Seller on Codeseller
-  Версия шаблона: v1.3
+  Версия шаблона: v1.4
   Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="full-width",
   Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
   - сделать нужные вам правки и изменения и он будет подключаться оттуда
@@ -66,7 +66,11 @@ $version     = $data[0]->version;
 
 <div class="soc_fw_left">
     <a class="soc_fw_ava no_marked_icon cwb_no_animate" rel="nofollow noopener" title="Перейти в магазин и почитать описание" target="_blank" href="<?php echo $url; ?>">
-        <img loading="lazy" alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict . '?ver=' . $version . ''; ?>">
+        <?php if ( rcl_exist_addon( 'lazy-daisy' ) ) { ?>
+            <img class="lzy_img" alt="Дополнение для WordPress плагина WP-Recall" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="<?php echo $pict . '?ver=' . $version . ''; ?>">
+        <?php } else { ?>
+            <img loading="lazy" alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict . '?ver=' . $version . ''; ?>">
+        <?php } ?>
     </a>
 </div>
 <div class="soc_fw_right">

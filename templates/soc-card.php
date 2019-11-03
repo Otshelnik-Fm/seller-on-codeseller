@@ -1,7 +1,7 @@
 <?php
 /*
   Шаблон дополнения Seller on Codeseller
-  Версия шаблона: v1.3
+  Версия шаблона: v1.4
   Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="card",
   Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
   - сделать нужные вам правки и изменения и он будет подключаться оттуда
@@ -68,7 +68,11 @@ $description = $data[0]->description;
 
 <div class="soc_box_ava">
     <a class="soc_cd_ava no_marked_icon cwb_no_animate" rel="nofollow noopener" target="_blank" href="<?php echo $url; ?>">
-        <img loading="lazy" alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict . '?ver=' . $version . ''; ?>">
+        <?php if ( rcl_exist_addon( 'lazy-daisy' ) ) { ?>
+            <img class="lzy_img" alt="Дополнение для WordPress плагина WP-Recall" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="<?php echo $pict . '?ver=' . $version . ''; ?>">
+        <?php } else { ?>
+            <img loading="lazy" alt="Дополнение для WordPress плагина WP-Recall" src="<?php echo $pict . '?ver=' . $version . ''; ?>">
+        <?php } ?>
         <div class="soc_box_price">Цена: <?php echo $price ?></div>
     </a>
     <div class="soc_more">
