@@ -166,9 +166,20 @@ class SOC_Shortcode {
                 continue; // нужен премиум
             $i ++;
 
+            $active_installs = $data->{'active-installs'};
+            if ( empty( ( array ) $active_installs ) )
+                $active_installs = 0;
+
+            $br = 'n/a';
+            if ( isset( $data->downloads ) && $data->downloads != 0 ) {
+                $br = $active_installs / $data->downloads;
+            }
+
             $out .= '<div class="soc_blk" data-num="' . $i . '" '
                 . 'data-price="' . $price . '" '
                 . 'data-popular="' . $data->downloads . '" '
+                . 'data-install="' . $active_installs . '" '
+                . 'data-bouncer="' . round( $br, 2 ) . '" '
                 . 'data-name="' . $data->name . '">';
             $out .= rcl_get_include_template( 'soc-' . esc_html( $this->attrs['template'] ) . '.php', __FILE__, array( $data, $this->attrs ) ); // цепляем шаблон
             $out .= '</div>';
@@ -191,13 +202,15 @@ class SOC_Shortcode {
         $out .= '<div class="soc_sort">';
         $out .= '<i class="rcli fa-sort-amount-desc soc_button" title="От большего к меньшему"></i><i class="rcli fa-sort-amount-asc soc_button" title="От меньшего к большему"></i>';
         $out .= '</div>';
-        $out .= '<div class="soc_premium soc_button"><i class="rcli fa-usd"></i>Премиум</div>';
-        $out .= '<div class="soc_reset soc_button"><i class="rcli fa-refresh"></i>Сброс</div>';
+        $out .= '<div class="soc_premium soc_button" title="Платные дополнения"><i class="rcli fa-usd"></i><span>Премиум</span></div>';
+        $out .= '<div class="soc_reset soc_button" title="Сбросить сортировку"><i class="rcli fa-refresh"></i><span>Сброс</span></div>';
         $out .= '</div>';
 
         $out .= '<div class="soc_second_line">';
-        $out .= '<div class="soc_popular soc_button" title="По скачиванию"><i class="rcli fa-download"></i>Популярные</div>';
-        $out .= '<div class="soc_alphabet soc_button"><i class="rcli fa-sort-alpha-asc"></i>По алфавиту</div>';
+        $out .= '<div class="soc_popular soc_button" title="Сортировка: самые скачиваемые"><i class="rcli fa-download"></i><span>По скачиванию</span></div>';
+        $out .= '<div class="soc_install soc_button" title="Сортировка: больше всего активных установок"><i class="rcli fa-calendar-check-o"></i><span>По установкам</span></div>';
+        $out .= '<div class="soc_br soc_button" title="Сортировка по показателю отказов (bounce rate)"><i class="rcli fa-bar-chart"></i><span>По отказам</span></div>';
+        $out .= '<div class="soc_alphabet soc_button" title="Сортировка по алфавиту"><i class="rcli fa-sort-alpha-asc"></i><span>По алфавиту</span></div>';
         $out .= '</div>';
         $out .= '</div>'; /* END soc_sort_wrapper */
         return $out;

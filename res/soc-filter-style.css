@@ -1,36 +1,46 @@
-.soc_sort_wrapper{
+.soc_sort_wrapper {
     animation: fadeIn .5s linear .7s forwards;
+    margin: 6px;
+}
+.soc_first_line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 16px;
 }
 .soc_sort {
-    display: inline-block;
-    margin: 5px;
+    margin: 6px;
 }
 .soc_button {
     background-color: #f2f2f2;
-    border: 1px solid #e2e2e2;
+    border: 1px solid #dfdfdf;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
     font-size: 18px;
-    line-height: 1;
-    margin: 4px 2px;
+    line-height: normal;
+    margin: 3px;
     padding: 6px 9px;
-    transition: all 0.1s ease-in;
-    vertical-align: middle;
+    transition: all .1s ease-in;
+    align-items: center;
 }
 .soc_button.active,
 .soc_button:hover {
-    background-color: #e5e5e5;
-    border-color: #d5d5d5;
+    border-color: rgba(var(--rclRgb),.3);
+    background: rgba(var(--rclRgb),.2);
 }
 .soc_button.active {
     pointer-events: none;
 }
 .soc_sort_wrapper .rcli {
-    margin: 0 5px 0 0;
-    min-width: 10px;
+    margin: 0 6px 0 0;
+    min-width: 12px;
 }
 .soc_sort .rcli.soc_button.disabled {
     color: #999;
-    opacity: 0.6;
+    opacity: .6;
     pointer-events: none;
+}
+.soc_mark {
+    color: #1f846c;
+    font-weight: 500;
 }

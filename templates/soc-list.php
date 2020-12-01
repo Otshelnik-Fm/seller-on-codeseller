@@ -1,7 +1,7 @@
 <?php
 /*
   Шаблон дополнения Seller on Codeseller
-  Версия шаблона: v1.4
+  Версия шаблона: v1.5
   Шаблон для отображения содержимого шорткода [codeseller_product] с указанием атрибута template="list",
   Этот шаблон можно скопировать в папку реколл шаблонов по пути: ваш-сайт/wp-content/wp-recall/templates/
   - сделать нужные вам правки и изменения и он будет подключаться оттуда
@@ -14,41 +14,50 @@
 
   Array(
   [0] => stdClass Object(
-  [name] => AutoBot Cabinet
-  [version] => 1.0
-  [support-core] => 16.9.0
-  [description] => Если это кабинет автобота - то в нем только вкладка Сообщения сайта. Автобот - автоматический помощник сайта
+  [name] => User Info Tab
+  [version] => 3.0.2
+  [support-core] => 16.24.28
+  [description] => Добавляет вкладку с информацией о пользователе и его статистикой. Отменяет всплывающий блок "Информация о пользователе"
   [author] => Владимир Дружаев (Otshelnik-Fm)
-  [author-uri] => https://otshelnik-fm.ru/
-  [add-on-uri] => https://codeseller.ru/?p=16887
-  [update] => 2017-12-22 15:46:23
-  [slug] => autobot-cabinet
-  [thumbnail] => https://codeseller.ru/wp-content/uploads/2017/12/AutoBot-Cabinet-150x150.jpg
-  [price] => 0
+  [author-uri] => http://otshelnik-fm.ru/
+  [add-on-uri] => https://codeseller.ru/?p=13876
+  [update] => 2020-11-30 15:24:39
+  [slug] => user-info-tab
+  [thumbnail] => https://codeseller.ru/wp-content/uploads/2016/12/User-info-tab-150x150.jpg
+  [price] => 1299
   [author_id] => 44
-  [post_id] => 16887
-  [downloads] => 11
-  [active-installs] => 8
+  [post_id] => 13876
+  [downloads] => 94
+  [rating] => stdClass Object(
+  [votes] => 12
+  [value] => 5
+  )
+
+  [partner] => 1
+  [vip] => 0
+  [active-installs] => 67
   [terms] => stdClass Object(
   [product_tag] => stdClass Object(
-  [uvedomleniya] => уведомления
-  [lichnye-soobshheniya] => личные сообщения
-  )
-  )
-  )
+  [profil] => профиль
+  [kontakty] => контакты
+  [rasshirennyj-profil] => Расширенный профиль
+  [polzovateli] => Пользователи
+  [lichnyj-kabinet] => Личный кабинет
+  )))
+
   [1] => Array(
   [type] => add-ons
   [slug] =>
   [template] => list
   [disable_ref] => 0
-  [filter] => 0
+  [filter] => 1
   [author] => 44
   [sort] =>
   [premium] => 0
   [random] =>
-  [number] => 100
-  )
-  )
+  [number] => 150
+  [limit] =>
+  ))
 
  */
 
@@ -69,6 +78,11 @@ $downloads       = ( string ) $data[0]->downloads;
 $active_installs = $data[0]->{'active-installs'};
 if ( empty( ( array ) $active_installs ) )
     $active_installs = 0;
+
+$br = 'n/a';
+if ( isset( $downloads ) && $downloads != 0 ) {
+    $br = $active_installs / $downloads;
+}
 // ниже сам шаблон для редактирования
 ?>
 
@@ -93,13 +107,13 @@ if ( empty( ( array ) $active_installs ) )
 
     <div class="soc_tl_support">поддержка WP-Recall: v.<?php echo $support; ?></div>
 
-    <div class="soc_tl_content_bottom">
-        <div class="soc_tl_description" data-title="<?php echo esc_html( $description ); ?>">
-            <?php echo $description; ?>
-        </div>
-        <div class="soc_tl_bottom">
-            <span title="Загрузок"><i class="rcli fa-download"></i><?php echo $downloads; ?></span>
-            <span title="Активных установок"><i class="rcli fa-calendar-check-o"></i><?php echo $active_installs; ?></span>
-        </div>
+    <div class="soc_tl_description" data-title="<?php echo esc_html( $description ); ?>">
+        <?php echo $description; ?>
+    </div>
+
+    <div class="soc_tl_bottom">
+        <span class="soc_tl_downloads" title="Количество скачиваний"><i class="rcli fa-download"></i><span><?php echo $downloads; ?></span></span>
+        <span class="soc_tl_install" title="Активных установок"><i class="rcli fa-calendar-check-o"></i><span><?php echo $active_installs; ?></span></span>
+        <span class="soc_tl_bounce" title="Показатель отказов (bounce rate)"><i class="rcli fa-bar-chart"></i><span><?php echo round( $br, 2 ); ?></span></span>
     </div>
 </div>

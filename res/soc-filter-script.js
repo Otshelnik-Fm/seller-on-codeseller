@@ -5,6 +5,8 @@ $(document).ready(function() {
     var aDesc  = $('.fa-sort-amount-desc');
     var pBttn = $('.soc_premium');
     var popBttn = $('.soc_popular');
+    var instBttn = $('.soc_install');
+    var brBttn = $('.soc_br');
     var alphaBttn   = $('.soc_alphabet');
     
     var shWrap = $('.soc_wrapper.js_filter_ready');
@@ -37,15 +39,40 @@ $(document).ready(function() {
         $(".soc_wrapper.js_filter_ready [data-price='0']").hide();
     });
 
-    // вывод попул¤рные
+    // по скачиваниям
     popBttn.on('click', function() {
         soc_clear_buttons();
         aAsc.add(aDesc).addClass('disabled');
         popBttn.addClass('active');
+        $('.soc_tl_downloads').addClass('soc_mark');
         sBlck.sort(sort_popular).appendTo(shWrap);
     });
     function sort_popular(a, b){
         return ($(b).data('popular')) > ($(a).data('popular')) ? 1 : -1;    
+    }
+    
+    // по активным установкам
+    instBttn.on('click', function() {
+        soc_clear_buttons();
+        aAsc.add(aDesc).addClass('disabled');
+        instBttn.addClass('active');
+        $('.soc_tl_install').addClass('soc_mark');
+        sBlck.sort(sort_install).appendTo(shWrap);
+    });
+    function sort_install(a, b){
+        return ($(b).data('install')) > ($(a).data('install')) ? 1 : -1;    
+    }
+    
+    // по отказам
+    brBttn.on('click', function() {
+        soc_clear_buttons();
+        aAsc.add(aDesc).addClass('disabled');
+        brBttn.addClass('active');
+        $('.soc_tl_bounce').addClass('soc_mark');
+        sBlck.sort(sort_br).appendTo(shWrap);
+    });
+    function sort_br(a, b){
+        return ($(b).data('bouncer')) > ($(a).data('bouncer')) ? 1 : -1;    
     }
 
     //  вывод по алфавиту
@@ -74,9 +101,15 @@ $(document).ready(function() {
     
     // очищаем статусы
     function soc_clear_buttons(){
-        aAsc.add(aDesc).add(pBttn).add(popBttn).add(alphaBttn).removeClass('active');
+        aAsc.add(aDesc).add(pBttn).add(popBttn).add(instBttn).add(brBttn).add(alphaBttn).removeClass('active');
         aAsc.add(aDesc).removeClass('disabled');
+        $('.soc_tl_downloads, .soc_tl_install, .soc_tl_bounce').removeClass('soc_mark');
         $(".soc_wrapper.js_filter_ready [data-price='0']").show();
+    }
+    
+    var count = $(".soc_list .soc_wrapper").children().length;
+    if(count > 5){
+        $(".soc_list").before('<div class="soc_cnt">Дополнений: '+count+'</div>');
     }
 });
 })(jQuery);
