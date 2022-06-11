@@ -44,7 +44,7 @@
             soc_clear_buttons();
             pBttn.addClass('active');
             $(".soc_wrapper.js_filter_ready [data-price='0']").hide();
-            count_items();
+            count_items(this);
         });
 
         // вывод vip
@@ -53,7 +53,7 @@
             disable_bttns();
             vipBttn.addClass('active');
             $(".soc_wrapper.js_filter_ready [data-vip='0']").hide();
-            count_items();
+            count_items(this);
         });
 
         // по скачиваниям
@@ -112,7 +112,7 @@
             $('.soc_reset .fa-refresh').addClass('fa-spin');
             soc_clear_buttons();
             sBlck.sort(sort_by_default).appendTo(shWrap);
-            count_items();
+            count_items(this);
             setTimeout(function () {
                 $('.soc_reset .fa-refresh').removeClass('fa-spin');
             }, 2000);
@@ -137,13 +137,18 @@
 
         // создаем счетчик
         function create_counter() {
-            let count = $(wrap).children().length;
-            $(".soc-main_list").before('<div class="soc_cnt">Дополнений: <span>' + count + '</span></div>');
+            $(wrap).each(function (index) {
+                let count = $(this).children().length;
+                if (count > 2) {
+                    $(this).parent().before('<div class="soc_cnt">Дополнений: <span>' + count + '</span></div>');
+                }
+            });
         }
 
         // считаем по фильтру
-        function count_items() {
-            let count = $(wrap).children(':visible').length;
+        function count_items(el) {
+            let box = $(el).parents('.soc-main_list').find('.soc_wrapper');
+            let count = $(box).children(':visible').length;
             $(".soc_cnt span").html(count);
         }
     });

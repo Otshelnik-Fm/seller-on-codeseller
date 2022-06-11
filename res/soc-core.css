@@ -19,6 +19,7 @@
 .soc_wrapper {
     display: flex;
     gap: 12px;
+    z-index: 1;
 }
 
 .soc-main:not(.soc-main_card) .soc_wrapper {
