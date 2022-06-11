@@ -34,8 +34,8 @@
 
 .soc_button.active,
 .soc_button:hover {
-    background: #ededed;
-    border-color: #d8d8d8;
+    background: #eaeaea;
+    border-color: #d5d5d5;
     color: #000;
 }
 
