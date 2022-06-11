@@ -1,46 +1,63 @@
 .soc_sort_wrapper {
-    animation: fadeIn .5s linear .7s forwards;
-    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
-.soc_first_line {
+
+.soc_line {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    font-size: 16px;
+    gap: 6px;
 }
+
 .soc_sort {
-    margin: 6px;
+    display: flex;
+    gap: 6px;
 }
+
 .soc_button {
-    background-color: #f2f2f2;
-    border: 1px solid #dfdfdf;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #dfdddd;
     cursor: pointer;
     display: inline-flex;
-    font-size: 18px;
-    line-height: normal;
-    margin: 3px;
-    padding: 6px 9px;
+    gap: 6px;
+    justify-content: center;
+    min-height: 40px;
+    min-width: 44px;
+    padding: 0 12px;
     transition: all .1s ease-in;
-    align-items: center;
 }
+
 .soc_button.active,
 .soc_button:hover {
-    border-color: rgba(var(--rclRgb),.3);
-    background: rgba(var(--rclRgb),.2);
+    background: #ededed;
+    border-color: #d8d8d8;
+    color: #000;
 }
+
 .soc_button.active {
     pointer-events: none;
 }
-.soc_sort_wrapper .rcli {
-    margin: 0 6px 0 0;
-    min-width: 12px;
+
+.soc_button::before,
+.soc_button i::before {
+    font-size: 18px;
 }
+
 .soc_sort .rcli.soc_button.disabled {
     color: #999;
     opacity: .6;
     pointer-events: none;
 }
+
+.soc_sort_text,
+.soc_popular {
+    min-width: 162px;
+}
+
 .soc_mark {
-    color: #1f846c;
+    color: #b00303;
     font-weight: 500;
 }

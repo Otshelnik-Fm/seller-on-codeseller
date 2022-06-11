@@ -1,6 +1,6 @@
 Name: Seller on Codeseller;
-Version: 2.9;
-Support Core: 16.16.0;
+Version: 3.0;
+Support Core: 16.26.0;
 Description: Дополнение выводит шорткодом список товаров с сервиса CodeSeller.ru с возможностью их сортировки и фильтрации;
 Author: Владимир Дружаев (Otshelnik-Fm);
 Author URI: https://otshelnik-fm.ru/?utm_source=free-addons&utm_medium=addon-manager&utm_campaign=seller-on-codeseller&utm_content=not-domain&utm_term=home-page;
