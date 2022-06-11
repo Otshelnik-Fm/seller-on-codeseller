@@ -1,6 +1,7 @@
 .soc-main_card .soc_wrapper {
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 2;
 }
 
 .soc-main_card .soc_blk {
